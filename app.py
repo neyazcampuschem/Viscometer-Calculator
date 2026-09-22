@@ -14,7 +14,7 @@ st.set_page_config(
 st.markdown("""
     <style>
     .stApp {
-        background-color: #0f172a;
+        background-color: #64748b;
         color: #f8fafc;
     }
     .css-1d38152, [data-testid="stSidebar"] {
