@@ -13,51 +13,78 @@ st.set_page_config(
 # Custom CSS for UI styling
 st.markdown("""
     <style>
+    /* Main App Canvas - Clean, modern light slate */
     .stApp {
-        background-color: #64748b;
-        color: #f8fafc;
+        background-color: #f8fafc;
+        color: #0f172a;
     }
-    .css-1d38152, [data-testid="stSidebar"] {
-        background-color: #1e293b !important;
-        border-right: 1px solid #334155;
+
+    /* Sidebar - Dark, elegant slate base */
+    [data-testid="stSidebar"] {
+        background-color: #0f172a !important;
+        border-right: 1px solid #1e293b;
     }
+
+    /* Sidebar text readability */
+    [data-testid="stSidebar"] * {
+        color: #cbd5e1 !important;
+    }
+
+    /* Result Cards - Dark cool blue-gray contrast blocks */
     .result-card {
         background-color: #1e293b;
-        padding: 20px;
-        border-radius: 10px;
+        padding: 24px;
+        border-radius: 12px;
         border: 1px solid #334155;
         text-align: center;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
+    .result-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 20px -3px rgba(15, 23, 42, 0.12);
+    }
+
     .result-title {
         color: #94a3b8;
-        font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        margin-bottom: 5px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
     }
+
+    /* Accent color - Vivid Sky Blue for key figures */
     .result-value {
         color: #38bdf8;
-        font-size: 28px;
-        font-weight: bold;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 1.1;
     }
+
     .result-unit {
         color: #64748b;
-        font-size: 12px;
+        font-size: 13px;
+        margin-top: 4px;
     }
+
+    /* Formula / Accent Box */
     .formula-box {
-        background-color: #1e293b;
-        border-left: 4px solid #38bdf8;
-        padding: 12px;
-        border-radius: 4px;
+        background-color: #ffffff;
+        border-left: 4px solid #0284c7;
+        border-top: 1px solid #e2e8f0;
+        border-right: 1px solid #e2e8f0;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 16px;
+        border-radius: 0 8px 8px 0;
         margin-top: 20px;
-        color: #cbd5e1;
-        font-style: italic;
+        color: #334155;
         font-size: 14px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
     </style>
 """, unsafe_allow_html=True)
-
 # ==========================================
 # SIDEBAR: CREDITS PANEL (LEFT SIDE)
 # ==========================================
